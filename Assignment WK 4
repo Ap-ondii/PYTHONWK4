@@ -1,1 +1,21 @@
+file = open("example.txt", "r")
+print(file.read())
+
+file = open("example.txt", "w")
+data = file.write("Welcome to my World")
+print(data)
+try:
+        # Try opening and reading the file
+        file = open("example.txt", "r")
+        data = file.read()
+        print("File content:", data)
+
+
+except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+finally:
+        # Close the file if it was opened
+        
+            file.close()
+            print("File closed. Thank you!")   
 
